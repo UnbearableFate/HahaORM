@@ -1,0 +1,1 @@
+add_library(GMessageEntity STATIC company.pb.cc company_stock_price.pb.cc employee.pb.cc)

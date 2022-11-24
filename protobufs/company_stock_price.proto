@@ -1,0 +1,18 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+message company_stock_price {
+  int64 id = 1;
+  uint64 company_id = 2;
+  double stock_price = 3;
+  google.protobuf.Timestamp trading_date = 4;
+  google.protobuf.Timestamp last_login_time = 5;
+  bytes try_bytes = 6;
+  bool try_bool = 7;
+  float try_float = 8;
+  double try_dec = 9;
+  bool try_bit = 10;
+  string try_varchar = 11;
+  string try_char = 12;
+  google.protobuf.Timestamp try_time = 13;
+  string try_bigtext = 14;
+}

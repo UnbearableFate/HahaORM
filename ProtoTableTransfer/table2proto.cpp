@@ -101,8 +101,13 @@ void createProtoFile(DBConnector& dbc, string tableName) {
     ofs.close();
 }
 
+/*
+edit mysql login information (host ,port , user, password ), database name
+and protoc parameter if you like;
+complete by g++ --std=c++17 table2proto.cpp -lmysqlcppconn8 -lprotobuf
+*/
 int main(int argc, char* argv[]) {
-    auto dbc = DBConnector("localhost", 33060, "test_user", "123456");
+    auto dbc = DBConnector("localhost", 33060, "test_user", "123456", "test01");
     for (auto tableName : dbc.db().getTableNames()) {
         auto nameStr = string(tableName);
         createProtoFile(dbc, nameStr);
